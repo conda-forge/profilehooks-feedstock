@@ -1,17 +1,17 @@
 {% set name = "profilehooks" %}
-{% set version = "1.11.1" %}
+{% set version = "1.11.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 666538299a0b79d5fb3d0bb3c247ab6ea1d29d0f2a28cd08bf127742e0ccfad8
+  sha256: 41a74c1abdc5eeaf7dec024e9e89627f70e158374d263a3098bef31a06d38ab2
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
   host:
@@ -28,7 +28,7 @@ about:
   home: https://mg.pov.lt/profilehooks/
   license: MIT
   license_family: MIT
-  license_file: LICENSE 
+  license_file: LICENSE
   summary: Decorators for profiling/timing/tracing individual functions
   doc_url: https://mg.pov.lt/profilehooks/
   dev_url: https://github.com/mgedmin/profilehooks
