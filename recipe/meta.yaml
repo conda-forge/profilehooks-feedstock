@@ -1,5 +1,5 @@
 {% set name = "profilehooks" %}
-{% set version = "1.11.2" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41a74c1abdc5eeaf7dec024e9e89627f70e158374d263a3098bef31a06d38ab2
+  sha256: 05b87589df8a8c630fd701bae6008cc1cfff4457bd0064887ad25248327a5ba3
 
 build:
   number: 0
