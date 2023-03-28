@@ -1,11 +1,11 @@
-About profilehooks
-==================
+About profilehooks-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/profilehooks-feedstock/blob/main/LICENSE.txt)
 
 Home: https://mg.pov.lt/profilehooks/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/profilehooks-feedstock/blob/main/LICENSE.txt)
 
 Summary: Decorators for profiling/timing/tracing individual functions
 
