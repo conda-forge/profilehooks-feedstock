@@ -10,18 +10,16 @@ source:
   sha256: 05b87589df8a8c630fd701bae6008cc1cfff4457bd0064887ad25248327a5ba3
 
 build:
-  number: 1
+  noarch: python
+  number: 2
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -38,4 +36,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - YYYasin19
     - CJ-Wright
