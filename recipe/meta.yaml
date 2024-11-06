@@ -1,5 +1,5 @@
 {% set name = "profilehooks" %}
-{% set version = "1.12.0" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05b87589df8a8c630fd701bae6008cc1cfff4457bd0064887ad25248327a5ba3
+  sha256: 54a541cad49ddccee97b61a617404d7d736bf0bf79d36fbe2ac7caa3a1d9daaf
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
+    - setuptools <66.0.0
   run:
-    - python >=3.6
+    - python >=3.7
 
 test:
   imports:
